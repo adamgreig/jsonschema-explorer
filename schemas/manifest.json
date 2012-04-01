@@ -1,22 +1,22 @@
 [
     {
         "name": "Flight Document",
-        "url": "#/schemas/flight.json"
+        "url": "#schemas/flight.json"
     },
     {
         "name": "Listener Information",
-        "url": "#/schemas/listener_information.json"
+        "url": "#schemas/listener_information.json"
     },
     {
         "name": "Listener Telemetry",
-        "url": "#/schemas/listener_telemetry.json"
+        "url": "#schemas/listener_telemetry.json"
     },
     {
         "name": "Payload Configuration",
-        "url": "#/schemas/payload_configuration.json"
+        "url": "#schemas/payload_configuration.json"
     },
     {
         "name": "Payload Telemetry",
-        "url": "#/schemas/payload_telemetry.json"
+        "url": "#schemas/payload_telemetry.json"
     }
 ]
