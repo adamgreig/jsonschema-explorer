@@ -1,6 +1,6 @@
 {
     "title": "Flight Document",
-    "description": "Stores information about one flight, including launch window and payloads",
+    "description": "Stores information about one flight, including launch window and payloads.",
     "type": "object",
     "additionalProperties": false,
     "required": true,
