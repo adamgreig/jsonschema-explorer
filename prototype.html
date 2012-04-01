@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<title>jsonschema explorer prototype</title>
+
+<!-- css -->
+<link type="text/css" rel="stylesheet/less"
+    href="css/jsonschema_explorer.less" />
+<link type="text/css" rel="stylesheet"
+    href="http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono|Droid+Serif" />
+
+    <section id="parent" class="property">
+        <div class="attributes">
+            type: object<br />
+            additional properties: false<br />
+            required: true<br />
+        </div>
+        <h1>Flight Document</h1>
+        <div class="description">
+            Stores information about one flight, including launch window and
+            payloads.
+        </div>
+        <section id="node-type" class="property">
+            <div class="attributes">
+                type: string<br />
+                pattern: ^flight$<br />
+                required: true<br />
+            </div>
+            <h3>Document Type</h3>
+            <div class="property-name">
+                "type"
+            </div>
+            <div class="description">
+                Indicates that this is a flight document. Should be set to
+                'flight'.
+            </div>
+        </section>
+        <section id="node-launch" class="property">
+            <div class="attributes">
+                type: object<br />
+                required: true<br />
+                additional properties: false<br />
+            </div>
+            <h3>Launch Details</h3>
+            <div class="property-name">
+                "launch"
+            </div>
+            <div class="description">
+                Specific details about the launch.
+            </div>
+            <section id="node-launch-time" class="property">
+                <div class="attributes">
+                    type: string<br />
+                    format: date-time<br />
+                    required: true<br />
+                </div>
+                <h3>Launch Time</h3>
+                <div class="property-name">
+                    "time"
+                </div>
+                <div class="description">
+                    The (possibly estimated) time of actual launch in RFC3339
+                    format.
+                </div>
+            </section>
+        </section>
+        <section id="node-payloads" class="property">
+            <div class="attributes">
+                type: array<br />
+            </div>
+            <h3>Payloads in Flight</h3>
+            <div class="property-name">
+                "payloads"
+            </div>
+            <div class="description">
+                The configuration to use for each payload in this flight.
+            </div>
+            <section class="property">
+                <div class="attributes">
+                    type: string<br />
+                </div>
+                <h3>Payload Configuration ID</h3>
+                <div class="property-name">
+                    (each item)
+                </div>
+                <div class="description">
+                    The CouchDB Document ID for a payload configuration of a
+                    payload in this flight.
+                </div>
+            </section>
+        </section>
+    </section>
+
+<!-- javascript -->
+<script src="js/less-1.3.0.min.js"></script>
